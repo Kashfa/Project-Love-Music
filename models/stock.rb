@@ -10,6 +10,12 @@ class Stock
     @stock_level = options['stock_level']
   end
 
+  def stock_level
+    if @stock_level == 21
+      return "low"
+  end
+end
+
   def save()
     sql = "INSERT INTO stock
     (
