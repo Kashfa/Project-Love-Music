@@ -58,12 +58,14 @@ album6 = Album.new({
   'quantity' => 54,
   'artist_id' => artist6.id })
 
+
 album1.save
 album2.save
 album3.save
 album4.save
 album5.save
 album6.save
+
 
 stock1 = Stock.new({
  'album_id' => album1.id,
@@ -88,6 +90,7 @@ stock5 = Stock.new({
 stock6 = Stock.new({
  'album_id' => album6.id,
  'stock_level' => 54})
+
 
  stock1.save
  stock2.save

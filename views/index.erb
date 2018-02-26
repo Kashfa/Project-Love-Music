@@ -1,5 +1,6 @@
 <p>List of Albums</p>
 <% @albums.each do |album| %>
   <p>Title: <%= album.title %></p>
-  <p>Quantity: <%= album.quantity %>
+  <p>Quantity: <%= album.quantity %></p>
+  <p>Artist: <%= Artist.find( album.artist_id ).name%> </p>
   <% end %>
