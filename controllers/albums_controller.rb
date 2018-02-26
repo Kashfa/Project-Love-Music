@@ -1,9 +1,12 @@
-require('sinatra')
-require('sinatra/contrib/all')
-require('pry')
+
 require_relative('../models/album.rb')
 
 get '/albums' do
-  @title = Album.all()
+  @albums = Album.all()
   erb( :index )
+end
+
+post '/albums' do
+  @albums = Album.new()
+  erb( :create )
 end

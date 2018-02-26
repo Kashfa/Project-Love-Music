@@ -6,15 +6,12 @@ class Album
 
   def initialize(options)
     @id = options ['id'].to_i
-    @title = options['name']
+    @title = options['title']
     @genre = options['genre']
     @quantity = options['quantity'].to_i
     @artist_id = options['artist_id'].to_i
   end
 
-  def album_name
-    return "#{@title}"
- end
 
   def save()
     sql = "INSERT INTO albums
