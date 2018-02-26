@@ -10,8 +10,12 @@ class Stock
     @stock_level = options['stock_level']
   end
 
-  def stock_level
-    if @stock_level == 21
+  def stock_level_checker
+    if @stock_level > 50
+      return "high"
+    elsif @stock_level > 22
+      return "medium"
+    else
       return "low"
   end
 end

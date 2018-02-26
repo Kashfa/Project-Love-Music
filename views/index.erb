@@ -3,4 +3,6 @@
   <p>Title: <%= album.title %></p>
   <p>Quantity: <%= album.quantity %></p>
   <p>Artist: <%= Artist.find( album.artist_id ).name%> </p>
+  <p>Stock: <%= album.stock_level_checker%> </p>
+  <br>
   <% end %>

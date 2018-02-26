@@ -3,6 +3,10 @@ require_relative('../models/album')
 require_relative('../models/stock')
 
 
+Stock.delete_all
+Album.delete_all
+Artist.delete_all
+
 artist1 = Artist.new({"name" => "Oasis"})
 
 artist2 = Artist.new({"name" => "Blur"})

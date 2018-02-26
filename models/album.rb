@@ -12,6 +12,15 @@ class Album
     @artist_id = options['artist_id'].to_i
   end
 
+  def stock_level_checker
+    if @quantity > 50
+      return "high"
+    elsif @quantity > 22
+      return "medium"
+    else
+      return "low"
+  end
+end
 
   def save()
     sql = "INSERT INTO albums
