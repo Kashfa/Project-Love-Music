@@ -10,3 +10,7 @@ post '/albums' do
   @albums = Album.new()
   erb( :create )
 end
+
+get '/albums/new' do
+  erb( :new )
+end
