@@ -19,8 +19,8 @@ class Album
       return "medium"
     else
       return "low"
+    end
   end
-end
 
 
   def save()
@@ -49,41 +49,41 @@ end
       genre,
       quantity,
       artist_id
-    ) =
-    (
-      $1, $2, $3, $4
-    )
-    WHERE id = $5"
-    values = [@title, @genre, @quantity, @artist_id, @id]
-    SqlRunner.run( sql, values )
-  end
+      ) =
+      (
+        $1, $2, $3, $4
+      )
+      WHERE id = $5"
+      values = [@title, @genre, @quantity, @artist_id, @id]
+      SqlRunner.run( sql, values )
+    end
 
-  def delete()
-    sql = "DELETE FROM albums
-    WHERE id = $1"
-    values = [@id]
-    SqlRunner.run( sql, values )
-  end
+    def delete()
+      sql = "DELETE FROM albums
+      WHERE id = $1"
+      values = [@id]
+      SqlRunner.run( sql, values )
+    end
 
-  def self.delete_all
-  sql = "DELETE FROM albums"
-  values = []
-  SqlRunner.run(sql, values)
-end
+    def self.delete_all
+      sql = "DELETE FROM albums"
+      values = []
+      SqlRunner.run(sql, values)
+    end
 
-  def self.all()
-    sql = "SELECT * FROM albums"
-    albums = SqlRunner.run( sql )
-    result = albums.map { |album| Album.new( album ) }
-    return result
-  end
+    def self.all()
+      sql = "SELECT * FROM albums"
+      albums = SqlRunner.run( sql )
+      result = albums.map { |album| Album.new( album ) }
+      return result
+    end
 
-  def self.find( id )
-    sql = "SELECT * FROM albums
-    WHERE id = $1"
-    values = [id]
-    album = SqlRunner.run( sql, values )
-    result = Album.new( album.first )
-    return result
+    def self.find( id )
+      sql = "SELECT * FROM albums
+      WHERE id = $1"
+      values = [id]
+      album = SqlRunner.run( sql, values )
+      result = Album.new( album.first )
+      return result
+    end
   end
-end
