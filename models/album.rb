@@ -22,6 +22,7 @@ class Album
   end
 end
 
+
   def save()
     sql = "INSERT INTO albums
     (

@@ -1,0 +1,21 @@
+<form method="post" action="/albums/<%= @album.id %>">
+  <label for="artist">Artist Name</label>
+  <input id="artist" type="text" name="artist" />
+
+  <label for="album">Add Album Title</label>
+  <input id="album" type="text" name="album"
+
+  <label for="genre-select"> Genre: </label>
+  <select id="genre-select" name="genre">
+    <option value="pop">Pop </option>
+    <option values="Rock"> Rock </option>
+  </select>
+
+  <label for="quantity"> Quantity: </label>
+  <input type="number" id="quantity" name="quantity"
+  value="<%= @album.quantity() %>" />
+
+
+  <input type="submit" value="Update Stock"/>
+
+</form>

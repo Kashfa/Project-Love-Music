@@ -1,0 +1,10 @@
+<p> Album Title: <%= @album.title %> </p>
+  <p> Quantity: <%= @album.quantity %> </p>
+      <p> <a href="/albums/<%= @album.id %>/edit">
+         Edit this order
+       </a>
+     </p>
+
+     <form method="post" action="/albums/<%= @album.id %>/delete" >
+       <input type="submit" value="Delete Order" />
+     </form>
