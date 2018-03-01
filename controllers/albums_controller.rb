@@ -23,7 +23,8 @@ get'/albums/:id' do
 end
 
 get '/albums/:id/edit' do
-  @albums = Album.find( params[:id].to_i)
+  @album = Album.find( params[:id].to_i)
+  @artists = Artist.all()
   erb( :edit )
 end
 

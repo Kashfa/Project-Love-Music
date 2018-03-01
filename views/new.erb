@@ -1,9 +1,11 @@
+
 <form method="post" action="/albums">
   <label for="artist">Add Artist</label>
   <select id="artist" name="artist_id">
     <% for artist in @artists %>
       <option value="<%=artist.id%>"><%=artist.name%></option>
     <% end %>
+
 
   </select>
 
