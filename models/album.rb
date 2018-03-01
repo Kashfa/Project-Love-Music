@@ -2,13 +2,15 @@ require_relative('../db/sql_runner')
 
 class Album
 
-  attr_reader :title, :genre, :quantity, :artist_id, :id
+  attr_reader :title, :genre, :quantity, :buy_price, :sell_price, :artist_id, :id
 
   def initialize(options)
     @id = options ['id'].to_i
     @title = options['title']
     @genre = options['genre']
     @quantity = options['quantity'].to_i
+    @buy_price = options['buy_price'].to_i
+    @sell_price = options['sell_price'].to_i
     @artist_id = options['artist_id'].to_i
   end
 
@@ -86,4 +88,9 @@ class Album
       result = Album.new( album.first )
       return result
     end
+
+    def mark_up()
+     profit = @sell_price - @buy_price
+     return profit
+   end
   end

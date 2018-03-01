@@ -30,36 +30,48 @@ album1 = Album.new({
   'title' => 'Definitely Maybe',
   'genre' => 'Britpop',
   'quantity' => 20,
+  'buy_price' => 4,
+  'sell_price' => 10,
   'artist_id' => artist1.id })
 
 album2 = Album.new({
   'title' => 'Parklife',
   'genre' => 'Britpop',
   'quantity' => 45,
+  'buy_price' => 3,
+  'sell_price' => 7,
   'artist_id' => artist2.id })
 
 album3 = Album.new({
  'title' => 'Nevermind',
   'genre' => 'Grunge',
   'quantity' => 50,
+  'buy_price' => 5,
+  'sell_price' => 10,
   'artist_id' => artist3.id })
 
 album4 = Album.new({
  'title' => 'Emergency on Planet Earth',
   'genre' => 'Dance-Pop',
   'quantity' => 35,
+  'buy_price' => 5,
+  'sell_price' => 8,
   'artist_id' => artist4.id })
 
 album5 = Album.new({
  'title' => 'Once in a Lifetime',
   'genre' => 'Soul',
   'quantity' => 60,
+  'buy_price' => 4,
+  'sell_price' => 10,
   'artist_id' => artist5.id })
 
 album6 = Album.new({
  'title' => 'Spiceworld',
   'genre' => 'pop',
   'quantity' => 54,
+  'buy_price' => 2,
+  'sell_price' => 6,
   'artist_id' => artist6.id })
 
 

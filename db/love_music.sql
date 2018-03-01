@@ -13,6 +13,8 @@ CREATE TABLE albums (
   title VARCHAR(255),
   genre VARCHAR(255),
   quantity INT4,
+  buy_price INT4,
+  sell_price INT4,
   artist_id INT4 REFERENCES artists(id)
 );
 

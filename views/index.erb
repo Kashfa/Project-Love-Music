@@ -3,9 +3,9 @@
 <head>
 
 
-  <h1>
-    <h1>
+  <h1><h1>
 <style>
+
 
 
 table, th, td {
@@ -50,6 +50,8 @@ tr:nth-child(odd) td { background: #FEFEFE;
         <th>Artist</th>
         <th>Title</th>
         <th>Genre</th>
+        <th>Buy Price</th>
+        <th>Sell Price</th>
         <th>Quantity</th>
         <th>Stock</th>
         <th>Additional Information</th>
@@ -62,6 +64,8 @@ tr:nth-child(odd) td { background: #FEFEFE;
         <td><%=Artist.find( album.artist_id ).name%></td>
         <td><%= album.title %></td>
         <td><%= album.genre %></td>
+        <td><%= album.buy_price %></td>
+        <td><%= album.sell_price %></td>
         <td><%= album.quantity %></td>
         <td><%= album.stock_level_checker %> </td>
         <td><p><a href="/albums/<%= album.id %>"><img src="070242-firey-orange-jelly-icon-alphanumeric-information3-sc49.png"></a></p> </td>
