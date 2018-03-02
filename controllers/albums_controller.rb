@@ -1,6 +1,7 @@
 
 require_relative('../models/album.rb')
 
+
 get '/albums' do
   @albums = Album.all()
   erb( :index )
@@ -25,6 +26,7 @@ end
 get '/albums/:id/edit' do
   @album = Album.find( params[:id].to_i)
   @artists = Artist.all()
+
   erb( :edit )
 end
 

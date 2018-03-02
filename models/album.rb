@@ -31,14 +31,16 @@ class Album
       title,
       genre,
       quantity,
+      buy_price,
+      sell_price,
       artist_id
     )
     VALUES
     (
-      $1, $2, $3, $4
+      $1, $2, $3, $4, $5, $6
     )
     RETURNING *"
-    values = [@title, @genre, @quantity, @artist_id]
+    values = [@title, @genre, @quantity, @buy_price, @sell_price, @artist_id]
     album_data = SqlRunner.run(sql, values)
     @id = album_data.first()['id'].to_i
   end
@@ -50,13 +52,15 @@ class Album
       title,
       genre,
       quantity,
+      buy_price,
+      sell_price,
       artist_id
       ) =
       (
-        $1, $2, $3, $4
+        $1, $2, $3, $4, $5, $6
       )
-      WHERE id = $5"
-      values = [@title, @genre, @quantity, @artist_id, @id]
+      WHERE id = $7"
+      values = [@title, @genre, @quantity, @buy_price, @sell_price, @artist_id, @id]
       SqlRunner.run( sql, values )
     end
 
